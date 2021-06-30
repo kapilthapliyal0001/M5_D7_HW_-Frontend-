@@ -28,7 +28,7 @@ export default class HomePage extends Component {
   }
   render() {
     return (
-      <div>
+      <div style={{backgroundColor: "grey"}}>
         Hello there
         <div>
           {this.state.data ? (
