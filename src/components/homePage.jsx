@@ -13,8 +13,11 @@ export default class HomePage extends Component {
       console.log(REACT_APP_URL);
       console.log("I am there");
       const response = await fetch(`https://kapil-blogs.herokuapp.com/blogs`);
-      const data = await response.json();
-      console.log("output files are: ", data);
+      const file = await response.json();
+      console.log("output files are: ", file);
+      this.setState({
+        data: file,
+      });
     } catch (error) {
       console.log(error);
     }
@@ -28,7 +31,15 @@ export default class HomePage extends Component {
       <div>
         Hello there
         <div>
-          {this.state.data ? <div>${this.state.data}</div> : <div></div>}
+          {this.state.data ? (
+            <div>
+              {this.state.data.map((p) => {
+                return <div key={p.id}>{p.title} 1</div>;
+              })}
+            </div>
+          ) : (
+            <div>Check if i am there</div>
+          )}
         </div>
       </div>
     );
