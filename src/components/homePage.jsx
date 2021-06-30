@@ -34,7 +34,15 @@ export default class HomePage extends Component {
           {this.state.data ? (
             <div>
               {this.state.data.map((p) => {
-                return <div key={p.id}>{p.title} 1</div>;
+                return (
+                  <div key={p.id}>
+                    {p.title} 1
+                    <h2>
+                      Okey, now the Fetch is working and verified with the
+                      Origin.
+                    </h2>
+                  </div>
+                );
               })}
             </div>
           ) : (
