@@ -29,7 +29,7 @@ export default class HomePage extends Component {
     outputFiles: null,
     postURL: process.env.REACT_APP_URL
       ? process.env.REACT_APP_URL
-      : "http://localhost:3001/",
+      : "http://localhost:3001",
     editData: null,
     editSelected: false,
   };
@@ -41,7 +41,7 @@ export default class HomePage extends Component {
       //   const {REACT_APP_URL} = process.env.PORT;
       //   console.log(REACT_APP_URL);
       console.log("I am there");
-      const response = await fetch(`${process.env.REACT_APP_URL}/posts`);
+      const response = await fetch(`${this.state.postURL}/posts`);
       const file = await response.json();
       console.log("output files are: ", file);
       this.setState({
