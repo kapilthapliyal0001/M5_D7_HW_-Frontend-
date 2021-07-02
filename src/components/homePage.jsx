@@ -305,8 +305,9 @@ export default class HomePage extends Component {
                         md={4}
                         style={{backgroundColor: "white"}}
                         key={p._id}
+                        fluid
                       >
-                        <Card style={{width: "18rem"}}>
+                        <Card style={{width: "18rem"}} fluid>
                           <Card.Img
                             variant="top"
                             src={p.url ? p.url : p.cover}
