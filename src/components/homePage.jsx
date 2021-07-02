@@ -316,9 +316,9 @@ export default class HomePage extends Component {
                           <Card.Body>
                             <Card.Title>{p.title}</Card.Title>
                             <Card.Text>
-                              {p.content
+                              {/* {p.content
                                 ? p.content.substring(0, 100)
-                                : "Some Text"}
+                                : "Some Text"} */}
                             </Card.Text>
                             <Button
                               variant="primary"
